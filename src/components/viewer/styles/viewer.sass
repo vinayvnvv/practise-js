@@ -1,0 +1,26 @@
+$blue-print-color: blue
+$string-color: #df030f
+$err-bg-color: #df030f12
+.viewer
+    & .log-item
+        font-size: 13px
+        border-bottom: 1px solid #d9d9d977
+        padding: 4px var(--app-layout-padding)
+        font-family: 'Ubuntu', sans-serif
+        font-weight: 400
+        letter-spacing: 0.05rem
+        &.number, &.boolean
+            color: $blue-print-color
+        &.string
+            color: $string-color
+            &::before
+                content: '"'
+                color: #000
+            &::after
+                content: '"'
+                color: #000
+        &.err
+            color: $string-color
+            background-color: $err-bg-color
+        &:last-child
+            // border-bottom: none

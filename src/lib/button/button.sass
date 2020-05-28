@@ -1,0 +1,45 @@
+@import './../../styles/vars.sass'
+$default-btn-border-color: #dadce0
+$btn-padding-x: 17px
+$btn-hover: transparentize($primary, 0.95)
+$btn-active: transparentize($primary, 0.9)
+.app-btn
+    outline: none
+    background-color: transparent
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border-radius: 4px
+    border: 1px solid $default-btn-border-color
+    padding: 0px $btn-padding-x
+    font-weight: 500
+    cursor: pointer
+    position: relative
+    letter-spacing: .0107142857em
+    transition: border 280ms cubic-bezier(0.4,0,0.2,1),box-shadow 280ms cubic-bezier(0.4,0,0.2,1), background 0.1s
+    font-size: .875rem 
+    background-color: #fff
+    color: var(--primary)
+    min-height: 32px
+    &:hover, &.transparent:hover
+        background-color: $btn-hover
+    &:focus, &.transparent:focus
+        background-color: $btn-active
+    &.transparent
+        background-color: transparent
+        border: none
+    &.filled
+        background-color: $primary
+        color: $primary-invert
+        border-color: $primary
+        &:hover
+            background-color: darken($primary, 10)
+    &.link
+        background-color: transparent
+        color: var(--link)
+        &:hover
+            background-color: transparentize($link, 0.95)
+        &:focus
+            background-color: transparentize($link, 0.81)
+    &.large
+        min-height: 40px

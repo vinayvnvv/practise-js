@@ -1,0 +1,16 @@
+.app-root
+    height: 100vh
+    &>.app-header
+        height: var(--app-header-height)
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 12
+    &>.app-content
+        position: fixed
+        z-index: 11
+        width: 100%
+        left: 0
+        margin-top: var(--app-header-height)
+        height: calc(100vh - var(--app-header-height))
